@@ -14,7 +14,7 @@ def NMRSpectrum(k):
     Sx, Sy, Sz = SparsePauli(N)
 
     # Load spin matrix
-    name = f"Molecules/matrix{k}.csv"
+    name = f"../Molecules/matrix{k}.csv"
     J = np.loadtxt(name, delimiter=',')
     h = np.diag(J)
     h = h - np.mean(h)  # Get chemical shifts and remove the mean
